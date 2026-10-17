@@ -1,0 +1,23 @@
+{
+  "model_name": "LPG-LeakGuard-IF",
+  "version": "1.0.0",
+  "algorithm": "IsolationForest",
+  "n_estimators": 150,
+  "features": [
+    "consumption_rate_g_per_min",
+    "duration_continuous_drop_min",
+    "is_inactive_hours",
+    "hour_of_day",
+    "noise_stability_score",
+    "current_weight_kg"
+  ],
+  "metrics": {
+    "normal_accuracy": 85.0,
+    "anomaly_recall": 100.0
+  },
+  "rule_thresholds": {
+    "critical_continuous_duration_min": 60,
+    "inactive_leak_rate_min_g_per_min": 0.8,
+    "sudden_drop_threshold_g_per_min": 50.0
+  }
+}
